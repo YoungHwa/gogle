@@ -63,6 +63,18 @@
 		where EMAIL=#{email}
 	</update>
 	
+		<update id="myInfoUpdate" parameterType="Member">
+		update SPMS_MEMBS set
+			MNAME=#{name},
+			TEL=#{tel},
+			BLOG=#{blog},
+			UPDATE_DATE=now(),
+			DET_ADDR=#{detailAddress},
+			TAG=#{tag},
+			LEVEL=#{level}
+		where EMAIL=#{email} and PWD=#{password}
+	</update>
+	
 	<delete id="delete" parameterType="string">
 		delete from SPMS_MEMBS
 		where EMAIL=#{email}
@@ -80,7 +92,7 @@
 		values(#{email},#{filename})
 	</insert>
 	
-	<select id="listPhoto" parameterType="string" resultType="string">
+	<select id="listPhoto" parameterType="string" resultType="Member">
 		select IMGURL 
 		from SPMS_MEMIMG 
 		where EMAIL=#{value}

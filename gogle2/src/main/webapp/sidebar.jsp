@@ -10,10 +10,10 @@
 				<c:choose>
 					<c:when test="${member.level == 1}">
 						<!-- 관리프로젝트 -->
-						<li><a class="menuitem">관리메뉴</a>
+						<li><a class="menuitem">메뉴</a>
 							<ul class="submenu">
-								<li><a href="${rootPath}/member/list.do">멤버관리</a></li>
-								<li><a href="${rootPath}/project/list.do">프로젝트관리</a></li>
+								<li><a href="${rootPath}/member/list.do">멤버 관리</a></li>
+								<li><a href="${rootPath}/project/list.do">프로젝트 관리</a></li>
 							</ul></li>
 					</c:when>
 					<c:otherwise>

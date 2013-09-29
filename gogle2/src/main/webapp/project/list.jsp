@@ -52,7 +52,7 @@
 <body>
     <div class="container_12">
 <!-- Header -->
-<jsp:include page="/Header.jsp"></jsp:include>
+<jsp:include page="/header.do"></jsp:include>
         
 <!-- Sidebar -->
 <jsp:include page="/sidebar.do"></jsp:include>
