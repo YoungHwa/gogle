@@ -64,9 +64,9 @@
         <div class="grid_10">
             <div class="box round first">
                 <h2>Main Video</h2>
-                <div class="block">
-                	<video  autoplay="autoplay" loop="loop" id="main_video">
-						<source src="res/barbarbar.mp4">
+                <div class="block" align="center">
+                	<video autoplay="autoplay" loop="loop" id="main_video" style="width: 700px; height: 480px;">
+						<source src="res/barbarbar.mp4"  id="main_video">
 					</video>
                    <!--  <div id="chart1">
                     </div> -->

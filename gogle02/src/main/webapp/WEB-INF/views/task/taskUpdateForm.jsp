@@ -132,6 +132,9 @@
 							</tr>
 							<tr>
 								<td><label>기존UI프로토타입</label></td>
+								</tr>
+								<tr>
+								<td></td>
 								<td><img src="${rootPath}/file/${task.uiProtoUrl}"
 									alt="Profile Pic" class="content_member_photo_img"></td>
 							</tr>

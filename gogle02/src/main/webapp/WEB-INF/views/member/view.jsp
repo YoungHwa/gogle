@@ -115,8 +115,11 @@
 				<div class="block ">
 					<table class="form">
 						<tr>
-							<td><label> </label></td>
-							<td>사진<c:choose>
+							<td><label>사진</label></td>
+							</tr>
+							<tr>
+							<td></td>
+							<td><c:choose>
 									<c:when test="${memberInfo.photos[0] != null}">
 										<img src="${rootPath}/file/${memberInfo.photos[0]}"
 											alt="Profile Pic" class="content_member_photo_img">

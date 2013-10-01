@@ -83,19 +83,19 @@
 
 		<div class="grid_10">
 			<div class="box round first grid">
-
+						<h2>작업 정보</h2>
 				<div class="block ">
 
 
 
 
 					<div>
-
-						<h2>작업 정보</h2>
+							<input type="submit" value="<< 작업목록" class="btn btn-orange"
+								onclick="document.location.href='${rootPath}/task/list.do?projectNo=${task.projectNo}';">
 						<table class="form">
 							<tr>
-								<td><label>작업명</label></td>
-								<td>${task.title}</td>
+								<td><label><br>작업명</label></td>
+								<td><br>${task.title}</td>
 							</tr>
 							<tr>
 								<td><label>프로젝트명</label></td>
@@ -124,15 +124,18 @@
 							</tr>
 							<tr>
 								<td><label>UI프로토타입</label></td>
+								</tr>
+								<tr>
+								<td></td>
 								<td><c:if test="${task.uiProtoUrl != null}">
-										<img src="${rootPath}/file/${task.uiProtoUrl}">
+										<img src="${rootPath}/file/${task.uiProtoUrl}"
+										class="content_member_photo_img">
 									</c:if></td>
 							</tr>
 						</table>
 
 						<div class="form_submit_div">
-							<input type="submit" value="작업목록" class="btn btn-orange"
-								onclick="document.location.href='${rootPath}/task/list.do?projectNo=${task.projectNo}';">
+
 							<input type="submit" value="변경" class="btn btn-blue submit"
 								onclick="document.location.href='${rootPath}/task/updateForm.do?projectNo=${task.projectNo}&taskNo=${task.taskNo}';">
 							<input type="reset" value="삭제" class="btn btn-grey"

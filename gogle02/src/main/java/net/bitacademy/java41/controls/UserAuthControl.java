@@ -11,18 +11,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 
 
 @Controller
+@SessionAttributes("member")
 @RequestMapping("/auth")
 public class UserAuthControl {
 	@Autowired AuthService authService;
 
 	@RequestMapping("/logout")
-	public String logout(HttpSession session) throws Exception {
-		session.invalidate();
+	public String logout(SessionStatus status) throws Exception {
+		status.setComplete();
 		return "redirect:loginForm.do";
 	}
 	
@@ -47,7 +50,9 @@ public class UserAuthControl {
 			String password,
 			String saveId,
 			HttpServletResponse response,
-			HttpSession session) throws Exception {
+			Model model,
+			SessionStatus status
+			) throws Exception {
 		
 		Member member = authService.getUserInfo(email, password);
 		
@@ -63,11 +68,11 @@ public class UserAuthControl {
 		}
 		
 		if (member != null) {
-			session.setAttribute("member", member);
+			model.addAttribute("member", member);
 			return "redirect:../main.do";
 			
 		} else {
-			session.invalidate();
+			status.setComplete();
 			return "auth/loginFail";
 		}
 	}

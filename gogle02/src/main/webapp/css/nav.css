@@ -168,6 +168,7 @@ ul.nav li.secondary:hover a:hover {
 }
 ul.nav li.secondary:hover a:active {background:#1F4562;}
 
+ul.nav li.house a span, .house{background:url(../img/house.png) no-repeat center left;}
 ul.nav li.ic-dashboard a span, .ic-dashboard{background:url(../img/icon-dashboard.png) no-repeat center left;}
 ul.nav li.ic-typography a span, .ic-typography{background:url(../img/icon-typography.png) no-repeat center left;}
 ul.nav li.ic-charts a span, .ic-charts{background:url(../img/icon-charts-graphs.png) no-repeat center left;}

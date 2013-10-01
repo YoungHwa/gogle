@@ -37,7 +37,7 @@
         </div>
         <div class="grid_12">
             <ul class="nav main">
-                <li class="ic-dashboard"><a href="${rootPath}/main.do"><span>Main</span></a> </li>
+                <li class="house"><a href="${rootPath}/main.do"><span>Main</span></a> </li>
                 <li class="ic-form-style"><a href="javascript:"><span>Feed</Fspan></a>
                     <!-- 
                     
@@ -51,10 +51,10 @@
                      -->
                 </li>
                 
-               
+               <!-- 
                 <li class="ic-typography"><a href="typography.html"><span>Member</span></a></li>
 				<li class="ic-charts"><a href="charts.html"><span>Project</span></a></li>
-				
+				 -->
 				<!-- 
                 <li class="ic-grid-tables"><a href="table.html"><span>Data Table</span></a></li>
                 <li class="ic-gallery dd"><a href="javascript:"><span>Image Galleries</span></a>

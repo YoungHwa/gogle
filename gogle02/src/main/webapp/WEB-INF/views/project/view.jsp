@@ -79,7 +79,7 @@
 
 		<div class="grid_10">
 			<div class="box round first grid">
-
+				<h2>프로젝즈 정보</h2>
 				<div class="block ">
 
 					<div>
@@ -159,7 +159,8 @@
 						</thead>
 						<tbody>
 							<c:forEach var="memberByProject" items="${memberByProject}">
-								<tr class="odd gradeX" style='cursor: pointer;' align="center">
+								<tr class="odd gradeX" style='cursor: pointer;' align="center"
+								onclick="document.location.href='${rootPath}/member/view.do?email=${memberByProject.email}';">
 									<td>${memberByProject.name}</td>
 									<td>${memberByProject.email}</td>
 									<td>${memberByProject.tel}</td>
