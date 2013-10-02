@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.bitacademy.java41.dao.FeedDao">
+
+
+
+	<insert id="add" parameterType="map">
+		insert into
+		SPMS_FEEDS(CONTENT,REG_DATE,EMAIL,PNO)
+		values(#{content},now(),#{email},#{projectNo})
+	</insert>
+
+
+	<select id="list" parameterType="int" resultType="Feed">
+		select FNO,CONTENT,REG_DATE as regDate,EMAIL,PNO
+		from SPMS_FEEDS
+		where PNO=#{values}
+		order by FNO DESC
+	</select>
+
+
+	<delete id="delete" parameterType="int">
+		delete from SPMS_FEEDS
+		where FNO=#{value}
+	</delete>
+</mapper> 
+
+
+
+
+
+
